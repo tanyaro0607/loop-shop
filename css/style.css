@@ -9,6 +9,8 @@ body {
 .wrapper {
   max-width: 1110px;
   margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .header {
@@ -21,9 +23,12 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 126px;
+  padding-top: 47px;
 }
 
 .nav {
+  font-size: 14px;
   list-style-type: none;
   padding-left: 0;
   display: -webkit-box;
@@ -35,7 +40,8 @@ body {
 }
 
 .nav-item {
-  margin-left: 45px;
+  letter-spacing: .04rem;
+  margin-right: 45px;
 }
 
 .nav-link {
@@ -62,5 +68,63 @@ body {
   font-weight: 700;
   padding: 10px 24px;
   display: block;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.sale-description {
+  font-size: 30px;
+  letter-spacing: 0.6px;
+}
+
+.sale-title {
+  font-size: 55px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0 0 55px 0;
+}
+
+.btn {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 22px 31px;
+  background-color: #D7B399;
+}
+
+.box {
+  position: relative;
+}
+
+.box-price {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+
+.box-price-new {
+  font-size: 42px;
+  font-weight: 700;
+  color: #D84033;
+}
+
+.box-price-old {
+  font-size: 24px;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */
