@@ -2,8 +2,17 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.page {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
 .page-light {
   background-color: #F9F6F1;
+}
+
+.page-dark {
+  background-color: #212121;
 }
 
 .wrapper {
@@ -23,8 +32,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 126px;
   padding-top: 47px;
+  padding-bottom: 26px;
 }
 
 .nav {
@@ -77,6 +86,7 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 93px;
 }
 
 .main-item {
@@ -107,6 +117,10 @@ body {
   background-color: #D7B399;
 }
 
+.btn-xs {
+  padding: 5px 30px;
+}
+
 .box {
   position: relative;
 }
@@ -129,5 +143,69 @@ body {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 2.5px;
+}
+
+.notice {
+  color: #FFFFFF;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.notice-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.notice-title span {
+  font-weight: 700;
+}
+
+.notice-description {
+  font-size: 21px;
+  font-weight: 300;
+}
+
+.collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.collection-item {
+  padding: 50px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+  background-repeat: no-repeat;
+  background-size: 190px 171px;
+  background-position: calc(100% - 50px) bottom;
+}
+
+.collection-man {
+  background-image: url("../img/man.png");
+}
+
+.collection-woman {
+  background-image: url("../img/woman.png");
+}
+
+.collection-title {
+  font-size: 24px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.collection-title span {
+  font-weight: 500;
+}
+
+.collection-description {
+  font-weight: 300;
+  font-size: 16px;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */
