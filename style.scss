@@ -109,9 +109,9 @@ body {
     &-center {
         display: block;
         text-align: center;
-        max-width: 200px;
-        margin: 0 auto;
-    }
+        max-width: 160px;
+        margin: 0 auto 43px;
+        }
     span {
         margin-right: 15px;
     }
@@ -141,7 +141,7 @@ body {
 
 .notice {
     color: $white;
-    padding: 50px 0;
+    padding: 64px 0 54px 0;
     text-align: center;
     &-title {
         font-size: 30px;
@@ -161,11 +161,11 @@ body {
     display: flex;
     justify-content: space-between;
     &-item {
-        padding: 50px 0;
+        padding: 43px 0 55px 0;
         flex: 0 0 50%;
         background-repeat: no-repeat;
         background-size: 190px 171px;
-        background-position: calc(100% - 50px) bottom;
+        background-position: calc(100% - 37px) bottom;
     }
     &-man {
         background-image: url('../img/man.png');
@@ -177,6 +177,7 @@ body {
         font-size: 24px;
         font-weight: 300;
         text-transform: uppercase;
+        letter-spacing: 0.5px;
         span {
             font-weight: 500;
         }
@@ -184,7 +185,7 @@ body {
     &-description {
         font-weight: 300;
         font-size: 16px;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
     }
 }
 
@@ -193,17 +194,18 @@ body {
     font-size: 36px;
     text-transform: uppercase;
     margin: 23px 0 100px 0;
+    letter-spacing: 1.5px;
 }
 
 .product {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 103px;
+    margin-bottom: 100px;
     &-item {
         position: relative;
-        flex: 0 0 24%;
+        flex: 0 0 23%;
         &:before, &:after {
             content: '';
             display: block;
@@ -222,9 +224,48 @@ body {
     &-title {
         font-size: 14px;
         font-weight: 500;
+        margin: 21px 0 12px 0;
     }
     &-price {
         color: $accent;
+        font-size: 18px;
+        margin: 0;
         font-weight: 700;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 76px 0;
+    &-logo {
+        flex: 0 0 38%;
+    }
+    &-nav {
+        flex: 0 62%;
+        justify-content: space-between;
+        display: flex;
+    }
+    &-list {
+        margin: 0;
+        list-style-type: none;
+        padding-left: 0;
+        li {
+            margin-bottom: 16px;
+        }
+        &-item {
+            margin-bottom: 20px;
+        }
+        &-title {
+            text-transform: uppercase;
+            font-size: 10px;
+            font-weight: 700;
+            color: $white;
+        }
+        &-link {
+            color: $gray;
+            text-decoration: none;
+            font-size: 14px;
+        }
     }
 }
