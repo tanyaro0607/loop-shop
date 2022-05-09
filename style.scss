@@ -279,14 +279,24 @@ nav {
 .footer {
     display: flex;
     justify-content: space-between;
-    padding: 76px 0;
+    padding: 45px 0;
+    @include breakpoint(lg) {
+        flex-wrap: wrap;
+    }
     &-logo {
         flex: 0 0 38%;
+        @include breakpoint(lg) {
+            flex: 0 0 100%;
+            margin-bottom: 30px;
+        }
     }
     &-nav {
-        flex: 0 62%;
+        flex: 0 0 62%;
         justify-content: space-between;
         display: flex;
+        @include breakpoint(lg) {
+            flex: 0 0 100%;
+        }
     }
     &-list {
         margin: 0;
