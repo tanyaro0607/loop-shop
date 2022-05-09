@@ -20,4 +20,7 @@ $red: #D84033;
   @else if $point == xs{
     @media(max-width: 320px){@content;}
   }
+  @else if $point == minlg{
+    @media(min-width: 993px){@content;}
+  }
 }
