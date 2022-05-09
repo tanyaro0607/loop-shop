@@ -1,11 +1,4 @@
-$accent: #D7B399;
-$dark: #212121;
-$light: #F9F6F1;
-$white: #FFFFFF;
-$gray: #CBCFD4;
-$light-gray: #F4F4F4;
-$dark-gray: #CECECE;
-$red: #D84033;
+@import "_variables.scss";
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -45,19 +38,25 @@ body {
     justify-content: space-between;
     &-item {
         letter-spacing: .04rem;
-        margin-right: 45px;
+        margin-right: 43px;
     }
     &-link {
         color: $dark;
         text-decoration: none;
     }
+    &-info {
+        .nav-item {
+            margin-right: 25px;
+            margin-left: 25px;
+        }
+    }
 }
 
 .cart {
     background-image: url(../img/basket.svg);
-    padding-left: 52px;
+    padding-left: 42px;
+    padding-right: 0;
     display: block;
-    width: 30px;
     height: 30px;
     background-repeat: no-repeat;
     background-position: 0 center;
@@ -68,7 +67,7 @@ body {
         color: $white;
         font-size: 12px;
         font-weight: 700;
-        padding: 10px 24px;
+        padding: 10px 17px 10px 23px;
         display: block;
     }
 }
@@ -77,12 +76,21 @@ body {
     display: flex;
     justify-content: space-between;
     padding-bottom: 93px;
+    @include breakpoint(lg) {
+        flex-wrap: wrap;
+    }
     &-item {
         flex: 0 0 50%;
+        @include breakpoint(lg) {
+            flex: 0 0 100%;
+        }
     }
 }
 
 .sale {
+    @include breakpoint(lg) {
+        text-align: center;
+    }
     &-description {
         font-size: 30px;
         letter-spacing: 0.6px;
@@ -111,7 +119,7 @@ body {
         text-align: center;
         max-width: 160px;
         margin: 0 auto 43px;
-        }
+    }
     span {
         margin-right: 15px;
     }
@@ -120,6 +128,10 @@ body {
 
 .box {
     position: relative;
+    @include breakpoint(lg) {
+        max-width: 600px;
+        margin: 50px auto 0;
+    }
     &-price {
         position: absolute;
         right: 0;
@@ -136,6 +148,10 @@ body {
             font-weight: 700;
             letter-spacing: 2.5px;
         }
+    }
+    &-img {
+        width: 100%;
+        max-width: 556px;
     }
 }
 
@@ -160,12 +176,19 @@ body {
 .collection {
     display: flex;
     justify-content: space-between;
+    @include breakpoint(lg) {
+        flex-wrap: wrap;
+    }
     &-item {
-        padding: 43px 0 55px 0;
+        margin-left: 20px;
+        padding: 43px 0 62px 0;
         flex: 0 0 50%;
         background-repeat: no-repeat;
         background-size: 190px 171px;
         background-position: calc(100% - 37px) bottom;
+        @include breakpoint(lg) {
+            flex: 0 0 100%;
+        }
     }
     &-man {
         background-image: url('../img/man.png');
@@ -185,7 +208,7 @@ body {
     &-description {
         font-weight: 300;
         font-size: 16px;
-        margin-bottom: 45px;
+        margin-bottom: 42px;
     }
 }
 
@@ -203,9 +226,16 @@ body {
     text-align: center;
     margin-top: 103px;
     margin-bottom: 100px;
+    @include breakpoint(lg) {
+        flex-wrap: wrap;
+    }
     &-item {
         position: relative;
         flex: 0 0 23%;
+        @include breakpoint(lg) {
+            flex: 0 0 49%;
+            margin-bottom: 20px;
+        }
         &:before, &:after {
             content: '';
             display: block;
@@ -213,6 +243,9 @@ body {
             height: 25px;
             background-size: cover;
             background-repeat: no-repeat;
+            @include breakpoint(lg) {
+                background-size: 100% 25px;
+            }
         }
         &:before {
             background-image: url(../img/item-top.svg);
