@@ -7,6 +7,14 @@ body {
 .page {
     padding-top: 100px;
     padding-bottom: 100px;
+    @include breakpoint(lg) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    @include breakpoint(sm) {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
     &-light {
         background-color: $light;
     }
@@ -87,6 +95,7 @@ nav {
     padding-bottom: 93px;
     @include breakpoint(lg) {
         flex-wrap: wrap;
+        padding-bottom: 0;
     }
     &-item {
         flex: 0 0 50%;
@@ -127,7 +136,10 @@ nav {
         display: block;
         text-align: center;
         max-width: 220px;
-        margin: 0 auto 43px;
+        margin: 0 auto;
+        @include breakpoint(lg) {
+            margin: 0 auto 20px;
+        }
     }
     span {
         margin-right: 15px;
@@ -166,12 +178,15 @@ nav {
 
 .notice {
     color: $white;
-    padding: 64px 0 54px 0;
+    padding: 65px 0;
     text-align: center;
     &-title {
         font-size: 30px;
         text-transform: uppercase;
         font-weight: 400;
+        @include breakpoint(sm) {
+            font-size: 18px;
+        }
         span {
             font-weight: 700;
         }
@@ -179,6 +194,9 @@ nav {
     &-description {
         font-size: 21px;
         font-weight: 300;
+        @include breakpoint(sm) {
+            font-size: 14px;
+        }
     }
 }
 
@@ -227,6 +245,10 @@ nav {
     text-transform: uppercase;
     margin: 23px 0 100px 0;
     letter-spacing: 1.5px;
+    @include breakpoint(sm) {
+        margin: 23px 0 50px 0;
+        font-size: 28px;
+    }
 }
 
 .product {
@@ -237,6 +259,12 @@ nav {
     margin-bottom: 100px;
     @include breakpoint(lg) {
         flex-wrap: wrap;
+        margin-top: 83px;
+        margin-bottom: 80px;
+    }
+    @include breakpoint(sm) {
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
     &-item {
         position: relative;
@@ -297,11 +325,17 @@ nav {
         @include breakpoint(lg) {
             flex: 0 0 100%;
         }
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+        }
     }
     &-list {
         margin: 0;
         list-style-type: none;
         padding-left: 0;
+        @include breakpoint(sm) {
+            flex: 0 0 49%;
+        }
         li {
             margin-bottom: 16px;
         }
