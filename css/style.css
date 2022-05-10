@@ -360,6 +360,7 @@ body {
 @media (max-width: 500px) {
   .collection-item {
     padding: 30px 0 110px 0;
+    background-position: right bottom;
   }
 }
 
